@@ -4761,3 +4761,14 @@ html.scroll-lock {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none; }
+
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.img-fluid:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+
+}

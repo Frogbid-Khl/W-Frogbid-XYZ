@@ -40,6 +40,33 @@
     <div class="scroll-progress"><span class="scroll-percent"></span></div>
 </div>
 
+<!--pop up modal-->
+<div class="modal" id="modal">
+    <div class='modal__container'>
+      <div class="row">
+          <div class="col-lg-6">
+           <img src="images/services/001.jpg">
+          </div>
+          <div class="col-lg-6">
+              <div style="padding: 20px;">
+                  <h2 class="text-white">Get Your Free E-book!</h2>
+                  <h5 class="text-white">20Powerful Website Tips For Higher Conversion</h5>
+                  <p class="text-white" style=" font-weight: bold;">Increase the revenue of your businesses by 3x by showing your clients how awesome you are through your website and by turning your visitors to your customers. Want to learn how to ? .
+                      Get your FREE copy now!
+                  </p>
+                  <div class="sub-main">
+                      <a href="#"><button class="button-three">Get your FREE copy now !</button></a>
+                  </div>
+              </div>
+
+
+          </div>
+
+      </div>
+    </div>
+    <i id="close" class="fas fa-times"></i>
+</div>
+
 <!-- Document Full Container
 ============================================= -->
 <div id="full-container">
@@ -917,6 +944,18 @@
 
 <!-- External JavaScripts
 ============================================= -->
+<script>
+    const closeBtn = document.getElementById('close');
+    const modalMenu = document.getElementById('modal');
+    const modalBtn = document.querySelector('.modal__button');
+
+    setTimeout(()=>{
+        modalMenu.classList.add('show');
+    },30000);
+
+    closeBtn.addEventListener('click',()=>{modalMenu.classList.remove('show')});
+    modalBtn.addEventListener('click',()=>{modalMenu.classList.remove('show')});
+</script>
 <script src="js/jquery.js"></script>
 <script src="js/jRespond.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>

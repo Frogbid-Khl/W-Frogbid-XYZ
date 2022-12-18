@@ -4772,3 +4772,114 @@ html.scroll-lock {
   transition: 0.5s;
 
 }
+
+
+.modal__img {max-width:60%;height:auto;display:block;}
+.modal{
+  max-width:700px;
+  width:85%;
+  position: fixed;
+  top:50%;
+  background-color: rgba(0,0,0,0.3);
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 5px;
+  background: #485cc7;
+  display: none;
+  z-index: 99;
+}
+.modal.show{display:block}
+#close {cursor:pointer;color:white;position:absolute;top:0;font-size:25px;right:0;padding:1rem;margin-right: 10px;}
+.modal__title{font-size: 2.5rem;}
+.modal__title span{display: block;font-weight: 400;}
+.modal__paragraph{font-size: 16px;font-weight: 400;}
+.modal__button{
+  background-color:#0a9396;
+  border:none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius:5px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+  transition: 0.3s background-color ease-in-out;
+}
+.modal__button:hover{background-color:#0a9372;}
+main{text-align: center;}
+.modal__container{
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px){
+  .modal__container {
+    flex-direction: row;
+    padding: 2rem;
+    text-align: left;
+  }
+  .modal__img{max-width:50%}
+}
+
+@media only screen and (max-width: 500px){
+  .modal__title {
+    font-size: 2rem;
+  }
+  .modal__img{max-width:80%}
+}
+button{
+  color:#fff;
+  text-align: center;
+  padding: 20px;
+}
+.sub-main{
+  width: 100%;
+  float: left;
+}
+.button-three{
+  text-align: center;
+  cursor: pointer;
+  font-size:18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.button-three {
+  position: relative;
+  background-color: #2a13bf;
+  border: none;
+  padding: 3px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  height: 100%;
+}
+
+.button-three:hover{
+  background:#fff;
+  box-shadow:0px 2px 10px 5px #97B1BF;
+  color:#000;
+}
+
+.button-three:after {
+  content: "";
+  background: #f1c40f;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button-three:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
